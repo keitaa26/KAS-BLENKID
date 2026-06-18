@@ -1,0 +1,37 @@
+name: PHP Syntax Check
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  php-lint:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        php: [8.2]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v3
+        with:
+          php-version: ${{ matrix.php }}
+      - name: Validate PHP syntax
+        run: |
+          php -l config.php
+          php -l functions.php
+          php -l koneksi.php
+          php -l login.php
+          php -l anggota.php
+          php -l edit.php
+          php -l iuran.php
+          php -l bayar.php
+          php -l pengeluaran.php
+          php -l belum_bayar.php
+          php -l status.php
