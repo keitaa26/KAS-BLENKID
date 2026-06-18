@@ -1,0 +1,186 @@
+/* ===== ROOT COLOR SYSTEM ===== */
+:root {
+    --primary: #2563eb;
+    --accent: #22c55e;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #0f172a;
+    --text-muted: #64748b;
+}
+
+/* ===== GLOBAL ===== */
+* {
+    transition: all 0.2s ease-in-out;
+}
+
+body {
+    background: var(--bg);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: var(--text);
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 1000px;
+}
+
+/* ===== HERO ===== */
+.hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.hero p {
+    color: var(--text-muted);
+}
+
+/* ===== CARD ===== */
+.card {
+    background: var(--card);
+    border: none;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: var(--primary);
+    border: none;
+}
+
+.btn-success {
+    background: var(--accent);
+    border: none;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+/* ===== TABLE ===== */
+.table {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table thead {
+    background: var(--primary);
+    color: white;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* ===== BADGE ===== */
+.badge {
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.badge-danger {
+    background: #ef4444;
+}
+
+.badge-warning {
+    background: #facc15;
+    color: #000;
+}
+
+.badge-success {
+    background: var(--accent);
+}
+
+/* ===== INPUT ===== */
+.form-control {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
+    transform: scale(1.02);
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: var(--primary) !important;
+    border-radius: 0 0 12px 12px;
+}
+
+/* ===== ANIMATION ===== */
+.fade-in {
+    animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+}
+
+/* ===== DARK MODE ===== */
+body.dark {
+    background: #0f172a;
+    color: #f1f5f9;
+}
+
+body.dark .card {
+    background: #1e293b;
+    color: white;
+}
+
+body.dark .table thead {
+    background: #334155;
+}
+
+body.dark .table tbody tr:hover {
+    background-color: #1e293b;
+}

@@ -1,0 +1,26 @@
+# Sistem dan editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Node modules
+node_modules/
+
+# Dependency directories
+vendor/
+
+# OS temporary files
+*.tmp
+*.temp
+
+# PHPStorm / JetBrains
+.idea/
+
+# VS Code
+.vscode/
+
+# Database dumps
+*.sql
+
+# XAMPP temporary
+/tmp/
