@@ -34,9 +34,18 @@ jobs:
           php-version: ${{ matrix.php }}
 
       - name: Validate PHP syntax
+        shell: bash
         run: |
-          echo "Checking PHP syntax for all .php files"
-          find . -type f -name '*.php' | sort | while read -r file; do
+          set -e
+          echo "Checking PHP syntax for all tracked PHP files"
+          files=$(git ls-files '*.php')
+
+          if [ -z "$files" ]; then
+            echo "No PHP files found."
+            exit 0
+          fi
+
+          while IFS= read -r file; do
             echo "-- $file --"
             php -l "$file"
-          done
+          done <<< "$files"
