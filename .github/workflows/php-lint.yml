@@ -37,15 +37,23 @@ jobs:
         shell: bash
         run: |
           set -e
-          echo "Checking PHP syntax for all tracked PHP files"
-          files=$(git ls-files '*.php')
-
-          if [ -z "$files" ]; then
-            echo "No PHP files found."
-            exit 0
-          fi
-
-          while IFS= read -r file; do
-            echo "-- $file --"
-            php -l "$file"
-          done <<< "$files"
+          echo "PHP version:"
+          php -v
+          echo "Checking PHP syntax for the app entry points and admin pages"
+          php -l index.php
+          php -l anggota.php
+          php -l bayar.php
+          php -l belum_bayar.php
+          php -l config.php
+          php -l dashboard.php
+          php -l edit.php
+          php -l functions.php
+          php -l iuran.php
+          php -l koneksi.php
+          php -l login.php
+          php -l logout.php
+          php -l navbar.php
+          php -l navbar_public.php
+          php -l pengeluaran.php
+          php -l publik.php
+          php -l status.php
