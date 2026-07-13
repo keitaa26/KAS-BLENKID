@@ -1,3 +1,7 @@
+#Tugas UAS
+Nama: Akmaludin Ikhlasul Amal
+NIM: 101230098
+
 # Kas IPP BLENKID
 
 Aplikasi kas sederhana untuk manajemen iuran, pembayaran, dan pengeluaran organisasi.
