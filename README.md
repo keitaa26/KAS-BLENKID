@@ -1,4 +1,4 @@
-#Tugas UAS
+
 Nama: Akmaludin Ikhlasul Amal
 NIM: 101230098
 
