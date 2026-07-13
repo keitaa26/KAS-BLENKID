@@ -1,6 +1,5 @@
 
-Nama: Akmaludin Ikhlasul Amal
-NIM: 101230098
+Nama: Akmaludin Ikhlasul Amal (101230098)
 
 # Kas IPP BLENKID
 
